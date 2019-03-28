@@ -1,0 +1,50 @@
+(1) 環境変数 HCC1_SRCDIR に hcc1 の src ディレクトリを指定します。
+    例: HCC1_SRCDIR=C:/User/hasegawa/20_hcc1/src
+
+(2) printf_chk.dll のソースをダウンロードする。
+
+(3) 以下のようにして解凍する。
+
+    $ bunzip2 -c printf_chk_src.tar.bz2 | tar xf -
+
+(4) 38_printf_chk/src ディレクトリにある printf_chk.sln を Visual Studio で開いて
+    通常通りビルドする。
+
+(5) 動作確認方法
+
+    $ cat sample.txt
+    int printf(const char*, ...);
+
+    void test000(void);
+
+    void test001(int a, long int b);
+
+    int main()
+    {
+      printf("hello world\n");
+      test000();
+      test001(1, 2L);
+      return 0;
+    }
+
+    const char* f(){ return "hogehoge"; }
+
+    void test000(void)
+    {
+      printf("%s %d\n", f());
+    }
+
+    void test001(int a, long int b)
+    {
+      printf("a = %d b = %d\n", a, b);
+    }
+
+    void test002(long int a, unsigned long int b, int c, unsigned int d)
+    {
+      printf("%s %lu %08x", f(), a, c);
+      printf("%s %lu %08x", f(), b, d);
+      printf("%s %lu %08x", f(), b+c, f());
+    }
+    $ $HCC1_SRCDIR/x64/Debug/hcc1.exe --generator x64/Debug/printf_chk.dll sample.txt
+    # ここにエラーメッセージが表示されます。
+    $
