@@ -5,14 +5,14 @@
 
 (3) 以下のようにして解凍する。
 
-    $ bunzip2 -c printf_chk_src.tar.bz2 | tar xf -
+    % bunzip2 -c printf_chk_src.tar.bz2 | tar xf -
 
 (4) 38_printf_chk/src ディレクトリにある printf_chk.sln を Visual Studio で開いて
     通常通りビルドする。
 
 (5) 動作確認方法
 
-    $ cat sample.txt
+    % cat sample.txt
     int printf(const char*, ...);
 
     void test000(void);
@@ -45,6 +45,6 @@
       printf("%s %lu %08x", f(), b, d);
       printf("%s %lu %08x", f(), b+c, f());
     }
-    $ $HCC1_SRCDIR/x64/Debug/hcc1.exe --generator x64/Debug/printf_chk.dll sample.txt
+    % $HCC1_SRCDIR/x64/Debug/hcc1.exe --generator x64/Debug/printf_chk.dll sample.txt
     # ここにエラーメッセージが表示されます。
-    $
+    %
