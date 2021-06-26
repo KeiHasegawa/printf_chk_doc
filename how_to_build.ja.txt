@@ -1,16 +1,16 @@
-(1) ŠÂ‹«•Ï” HCC1_SRCDIR ‚É hcc1 ‚Ì src ƒfƒBƒŒƒNƒgƒŠ‚ğw’è‚µ‚Ü‚·B
-    —á: HCC1_SRCDIR=C:/User/hasegawa/20_hcc1/src
+(1) ç’°å¢ƒå¤‰æ•° HCC1_SRCDIR ã« hcc1 ã® src ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¾ã™ã€‚
+    ä¾‹: HCC1_SRCDIR=C:/User/hasegawa/20_hcc1/src
 
-(2) printf_chk.dll ‚Ìƒ\[ƒX‚ğƒ_ƒEƒ“ƒ[ƒh‚·‚éB
+(2) printf_chk.dll ã®ã‚½ãƒ¼ã‚¹ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã™ã‚‹ã€‚
 
-(3) ˆÈ‰º‚Ì‚æ‚¤‚É‚µ‚Ä‰ğ“€‚·‚éB
+(3) ä»¥ä¸‹ã®ã‚ˆã†ã«ã—ã¦è§£å‡ã™ã‚‹ã€‚
 
     % bunzip2 -c printf_chk_src.tar.bz2 | tar xf -
 
-(4) 38_printf_chk/src ƒfƒBƒŒƒNƒgƒŠ‚É‚ ‚é printf_chk.sln ‚ğ Visual Studio ‚ÅŠJ‚¢‚Ä
-    ’Êí’Ê‚èƒrƒ‹ƒh‚·‚éB
+(4) 38_printf_chk/src ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ã‚ã‚‹ printf_chk.sln ã‚’ Visual Studio ã§é–‹ã„ã¦
+    é€šå¸¸é€šã‚Šãƒ“ãƒ«ãƒ‰ã™ã‚‹ã€‚
 
-(5) “®ìŠm”F•û–@
+(5) å‹•ä½œç¢ºèªæ–¹æ³•
 
     % cat sample.txt
     int printf(const char*, ...);
@@ -46,5 +46,5 @@
       printf("%s %lu %08x", f(), b+c, f());
     }
     % $HCC1_SRCDIR/x64/Debug/hcc1.exe --generator x64/Debug/printf_chk.dll sample.txt
-    # ‚±‚±‚ÉƒGƒ‰[ƒƒbƒZ[ƒW‚ª•\¦‚³‚ê‚Ü‚·B
+    # ã“ã“ã«ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒè¡¨ç¤ºã•ã‚Œã¾ã™ã€‚
     %
